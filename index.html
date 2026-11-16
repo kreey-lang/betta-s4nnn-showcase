@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BETTA S4NNN | Premium Show-Grade Betta Fish — Indonesia & Worldwide</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Google Fonts: Cinzel (Royal Header) & Plus Jakarta Sans (Modern UI) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Cinzel"', 'serif'],
+          },
+          colors: {
+            obsidian: '#08080A',
+            charcoal: '#111115',
+            cardbg: '#16161C',
+            gold: {
+              300: '#FDE047',
+              400: '#FACC15',
+              500: '#EAB308',
+              600: '#CA8A04',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      background-color: #08080A;
+      color: #F4F4F5;
+      overflow-x: hidden;
+    }
+
+    .text-gold-gradient {
+      background: linear-gradient(135deg, #FEF08A 0%, #EAB308 50%, #B45309 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gold-glow {
+      box-shadow: 0 0 30px rgba(234, 179, 8, 0.12);
+    }
+    .gold-glow-hover:hover {
+      box-shadow: 0 10px 35px rgba(234, 179, 8, 0.22);
+      border-color: rgba(234, 179, 8, 0.6);
+    }
+
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-6px) rotate(1.5deg); }
+    }
+    .animate-fish {
+      animation: floatSlow 4.5s ease-in-out infinite;
+    }
+
+    .glass-nav {
+      background: rgba(8, 8, 10, 0.82);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-gold-500 selection:text-black">
+  <!-- NAVBAR -->
+  <header class="fixed top-0 inset-x-0 z-50 glass-nav border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-11 h-11 rounded-xl bg-gradient-to-br from-gold-400 to-amber-700 p-[1.5px] shadow-lg shadow-gold-500/20">
+          <div class="w-full h-full bg-obsidian rounded-[10px] flex items-center justify-center">
+            <i class="fa-solid fa-crown text-gold-400 text-lg group-hover:scale-110 transition-transform"></i>
+          </div>
+        </div>
+        <div>
+          <span class="font-display font-bold text-xl tracking-wider text-white block leading-none">
+            BETTA <span class="text-gold-400">S4NNN</span>
+          </span>
+          <span class="text-[10px] uppercase tracking-[0.22em] text-zinc-400 block mt-1">
+            Bangka Belitung • Est. 2023
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Menu -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-300">
+        <a href="#catalog" class="hover:text-gold-400 transition" data-i18n="nav_catalog">Koleksi Ikan</a>
+        <a href="#shipping" class="hover:text-gold-400 transition" data-i18n="nav_shipping">Pengiriman & Pembayaran</a>
+        <a href="#guarantee" class="hover:text-gold-400 transition" data-i18n="nav_guarantee">Garansi DOA</a>
+        <a href="#contact" class="hover:text-gold-400 transition" data-i18n="nav_contact">Kontak</a>
+      </nav>
+
+      <!-- Language & Currency Switcher + CTA -->
+      <div class="flex items-center gap-3">
+        <div class="flex items-center bg-zinc-900 border border-white/10 rounded-full p-1 text-xs font-semibold">
+          <button id="btn-id" onclick="setLocale('id')" class="px-3 py-1.5 rounded-full bg-gold-500 text-black transition">
+            🇮🇩 ID / IDR
+          </button>
+          <button id="btn-en" onclick="setLocale('en')" class="px-3 py-1.5 rounded-full text-zinc-400 hover:text-white transition">
+            🌍 EN / USD
+          </button>
+        </div>
+
+        <a href="https://wa.me/6282178640487" target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-gold-500 hover:bg-gold-400 text-black font-bold text-xs uppercase tracking-wider px-4 py-2.5 rounded-full transition shadow-lg shadow-gold-500/20">
+          <i class="fa-brands fa-whatsapp text-base"></i>
+          <span data-i18n="nav_order">Pesan Langsung</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+    <div class="absolute top-16 left-1/2 -translate-x-1/2 w-[700px] h-[420px] bg-gold-500/15 blur-[130px] rounded-full pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Content -->
+        <div class="lg:col-span-7 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-semibold tracking-wider uppercase mb-6">
+            <i class="fa-solid fa-location-dot"></i>
+            <span data-i18n="hero_badge">Pangkal Pinang, Bangka Belitung • Pengiriman Lokal & Ekspor</span>
+          </div>
+
+          <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.12] text-white mb-6">
+            <span data-i18n="hero_title_1">Genetika Cupang Kontes</span> <br />
+            <span class="text-gold-gradient" data-i18n="hero_title_2">Kelas Dunia & Eksklusif</span>
+          </h1>
+
+          <p class="text-zinc-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed mb-8" data-i18n="hero_desc">
+            Spesialis breeder & seller ikan cupang hias kualitas premium (Halfmoon, Plakat, Crowntail) langsung dari Pangkal Pinang. Siap kirim aman ke seluruh Indonesia maupun pembeli mancanegara via Transshipper resmi.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="#catalog" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-gold-400 to-amber-500 hover:from-gold-300 hover:to-amber-400 text-black font-bold px-7 py-4 rounded-xl transition shadow-xl shadow-gold-500/20">
+              <span data-i18n="hero_cta_catalog">Lihat Katalog Ikan</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="https://wa.me/6282178640487?text=Halo%20Betta%20S4nnn,%20saya%20ingin%20konsultasi%20stok%20cupang%20terbaru." target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-zinc-900 hover:bg-zinc-800 border border-white/15 text-white font-semibold px-7 py-4 rounded-xl transition">
+              <i class="fa-brands fa-whatsapp text-emerald-400 text-lg"></i>
+              <span data-i18n="hero_cta_wa">Tanya Stok & Video</span>
+            </a>
+          </div>
+
+          <!-- Trust Stats -->
+          <div class="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/10 max-w-lg mx-auto lg:mx-0">
+            <div>
+              <p class="font-display text-2xl sm:text-3xl font-bold text-gold-400">100%</p>
+              <p class="text-xs text-zinc-400 mt-1" data-i18n="stat_1">Garansi Ikan Hidup (DOA)</p>
+            </div>
+            <div>
+              <p class="font-display text-2xl sm:text-3xl font-bold text-white">30+</p>
+              <p class="text-xs text-zinc-400 mt-1" data-i18n="stat_2">Negara Transshipper</p>
+            </div>
+            <div>
+              <p class="font-display text-2xl sm:text-3xl font-bold text-white">VIP</p>
+              <p class="text-xs text-zinc-400 mt-1" data-i18n="stat_3">Kualitas Form & Warna</p>
+            </div>
+          </div>
+        </div>
+        <!-- Right Featured Showcase Card -->
+        <div class="lg:col-span-5">
+          <div class="relative rounded-3xl bg-gradient-to-b from-zinc-900 to-obsidian border border-gold-500/30 p-6 sm:p-8 gold-glow">
+            <div class="flex items-center justify-between mb-4">
+              <span class="px-3 py-1 rounded-full bg-gold-500/20 text-gold-300 text-xs font-bold tracking-wider uppercase">
+                ★ Signature Line
+              </span>
+              <span class="text-xs font-mono text-zinc-400">ID: #BS4-ROYAL</span>
+            </div>
+
+            <div class="relative h-64 sm:h-72 rounded-2xl bg-radial from-amber-500/20 via-zinc-950 to-black border border-white/10 flex items-center justify-center overflow-hidden my-2">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(234,179,8,0.22),transparent_70%)]"></div>
+              
+              <svg viewBox="0 0 320 220" class="w-64 h-48 animate-fish drop-shadow-[0_12px_24px_rgba(234,179,8,0.35)]">
+                <defs>
+                  <linearGradient id="goldFin" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#FEF08A"/>
+                    <stop offset="50%" stop-color="#EAB308"/>
+                    <stop offset="100%" stop-color="#92400E"/>
+                  </linearGradient>
+                  <linearGradient id="blackBody" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#18181B"/>
+                    <stop offset="60%" stop-color="#09090B"/>
+                    <stop offset="100%" stop-color="#27272A"/>
+                  </linearGradient>
+                </defs>
+                <path d="M135,110 C90,35 35,45 45,110 C35,175 90,185 135,110 Z" fill="url(#goldFin)" opacity="0.92"/>
+                <path d="M135,110 L55,75 M135,110 L48,110 M135,110 L55,145" stroke="#09090B" stroke-width="2" opacity="0.5"/>
+                <path d="M145,88 C135,45 180,35 205,82 Z" fill="url(#goldFin)"/>
+                <path d="M140,130 C130,175 185,180 212,132 Z" fill="url(#goldFin)"/>
+                <path d="M215,132 L195,175 L225,142 Z" fill="#FACC15"/>
+                <path d="M125,110 C150,78 215,75 262,108 C220,142 150,140 125,110 Z" fill="url(#blackBody)" stroke="#EAB308" stroke-width="1.5"/>
+                <circle cx="185" cy="104" r="2.2" fill="#FDE047"/>
+                <circle cx="195" cy="112" r="2.2" fill="#FDE047"/>
+                <circle cx="205" cy="102" r="2.2" fill="#FDE047"/>
+                <circle cx="175" cy="113" r="2" fill="#EAB308"/>
+                <circle cx="242" cy="104" r="4.5" fill="#FEF08A"/>
+                <circle cx="243" cy="104" r="2.2" fill="#09090B"/>
+              </svg>
+
+              <div class="absolute bottom-3 inset-x-3 flex justify-between items-center text-[11px] text-zinc-400 bg-black/70 backdrop-blur-md px-3 py-1.5 rounded-lg border border-white/10">
+                <span>Black Gold Copper Galaxy</span>
+                <span class="text-gold-400 font-semibold">Age: 4.5 Mos</span>
+              </div>
+            </div>
+
+            <div class="mt-5 flex items-center justify-between">
+              <div>
+                <p class="text-xs text-zinc-400" data-i18n="featured_label">Koleksi Unggulan Minggu Ini</p>
+                <h3 class="text-lg font-bold text-white">Royal Black-Gold Halfmoon</h3>
+              </div>
+              <a href="#catalog" class="w-10 h-10 rounded-full bg-gold-500 text-black flex items-center justify-center hover:bg-gold-400 transition">
+                <i class="fa-solid fa-arrow-up-right-from-square text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CATALOG SECTION -->
+  <section id="catalog" class="py-20 bg-charcoal/60 border-y border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+        <div>
+          <span class="text-gold-400 text-xs font-bold uppercase tracking-[0.2em]" data-i18n="cat_sub">Stok Tersedia</span>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2" data-i18n="cat_title">
+            Katalog Ikan Cupang Pilihan
+          </h2>
+        </div>
+
+        <div class="flex flex-wrap gap-2" id="filter-container">
+          <button onclick="filterFish('All')" class="filter-btn active px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-gold-500 text-black transition">
+            All
+          </button>
+          <button onclick="filterFish('Plakat')" class="filter-btn px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-zinc-900 text-zinc-300 border border-white/10 hover:border-gold-500/50 transition">
+            Plakat
+          </button>
+          <button onclick="filterFish('Halfmoon')" class="filter-btn px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-zinc-900 text-zinc-300 border border-white/10 hover:border-gold-500/50 transition">
+            Halfmoon
+          </button>
+          <button onclick="filterFish('Crowntail')" class="filter-btn px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-zinc-900 text-zinc-300 border border-white/10 hover:border-gold-500/50 transition">
+            Crowntail
+          </button>
+        </div>
+      </div>
+
+      <div id="fish-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-7"></div>
+
+    </div>
+  </section>
+  <!-- SHIPPING & PAYMENT -->
+  <section id="shipping" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-gold-400 text-xs font-bold uppercase tracking-[0.2em]" data-i18n="ship_sub">Layanan Pengiriman & Transaksi</span>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2" data-i18n="ship_title">
+          Melayani Pembeli Indonesia & Luar Negeri
+        </h2>
+        <p class="text-zinc-400 text-sm sm:text-base mt-3" data-i18n="ship_desc">
+          Sistem pengemasan beroksigen murni standar ekspor dengan opsi kurir domestik tercepat maupun jaringan transshipper internasional.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Indonesia Domestic Card -->
+        <div class="rounded-3xl bg-cardbg border border-white/10 p-8 hover:border-gold-500/40 transition">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="text-2xl">🇮🇩</span>
+            <div>
+              <h3 class="text-xl font-bold text-white" data-i18n="dom_title">Pengiriman Domestik (Indonesia)</h3>
+              <p class="text-xs text-zinc-400">Dari Pangkal Pinang, Bangka Belitung ke Seluruh Nusantara</p>
+            </div>
+          </div>
+
+          <div class="space-y-4 text-sm text-zinc-300">
+            <div class="p-4 rounded-2xl bg-black/40 border border-white/5">
+              <p class="text-xs uppercase tracking-wider text-gold-400 font-bold mb-2" data-i18n="dom_courier_label">Ekspedisi Resmi</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 rounded-lg bg-zinc-800 text-white font-semibold">JNE Express</span>
+                <span class="px-3 py-1 rounded-lg bg-zinc-800 text-white font-semibold">J&T Express</span>
+                <span class="px-3 py-1 rounded-lg bg-zinc-800 text-white font-semibold">Kargo Udara (Partai)</span>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-black/40 border border-white/5">
+              <p class="text-xs uppercase tracking-wider text-gold-400 font-bold mb-2" data-i18n="dom_pay_label">Metode Pembayaran Lokal</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 rounded-lg bg-amber-500/15 text-amber-300 border border-amber-500/30 font-semibold">SeaBank</span>
+                <span class="px-3 py-1 rounded-lg bg-sky-500/15 text-sky-300 border border-sky-500/30 font-semibold">DANA</span>
+                <span class="px-3 py-1 rounded-lg bg-emerald-500/15 text-emerald-300 border border-emerald-500/30 font-semibold">GoPay</span>
+                <span class="px-3 py-1 rounded-lg bg-orange-500/15 text-orange-300 border border-orange-500/30 font-semibold">Shopee (Betta_S4nnn)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- International Export Card -->
+        <div class="rounded-3xl bg-cardbg border border-gold-500/25 p-8 gold-glow">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="text-2xl">🌍</span>
+            <div>
+              <h3 class="text-xl font-bold text-white" data-i18n="int_title">International Shipping (Worldwide)</h3>
+              <p class="text-xs text-zinc-400" data-i18n="int_sub">USA • Europe • Singapore • Malaysia • Thailand • Taiwan</p>
+            </div>
+          </div>
+
+          <div class="space-y-4 text-sm text-zinc-300">
+            <div class="p-4 rounded-2xl bg-black/40 border border-white/5">
+              <p class="text-xs uppercase tracking-wider text-gold-400 font-bold mb-2" data-i18n="int_ship_label">Export & Transshipper</p>
+              <p class="text-zinc-300 leading-relaxed" data-i18n="int_ship_desc">
+                Pengiriman ke luar negeri menggunakan jalur <strong>Official Transshipper</strong> terdaftar lengkap dengan dokumen karantina ikan & kesehatan resmi.
+              </p>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-black/40 border border-white/5">
+              <p class="text-xs uppercase tracking-wider text-gold-400 font-bold mb-2" data-i18n="int_pay_label">Global Payment Gateways</p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 rounded-lg bg-blue-500/15 text-blue-300 border border-blue-500/30 font-semibold">PayPal</span>
+                <span class="px-3 py-1 rounded-lg bg-lime-500/15 text-lime-300 border border-lime-500/30 font-semibold">Wise Transfer</span>
+                <span class="px-3 py-1 rounded-lg bg-zinc-800 text-white font-semibold">SWIFT Wire</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DOA GUARANTEE BANNER -->
+  <section id="guarantee" class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl bg-gradient-to-r from-zinc-900 via-amber-950/30 to-zinc-900 border border-gold-500/30 p-8 sm:p-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div class="flex items-start gap-5">
+          <div class="w-14 h-14 rounded-2xl bg-gold-500/20 border border-gold-500/40 flex items-center justify-center shrink-0">
+            <i class="fa-solid fa-shield-halved text-gold-400 text-2xl"></i>
+          </div>
+          <div>
+            <h3 class="font-display text-xl sm:text-2xl font-bold text-white" data-i18n="doa_title">
+              100% Garansi Ikan Hidup (Dead On Arrival Protection)
+            </h3>
+            <p class="text-zinc-300 text-sm mt-2 max-w-2xl leading-relaxed" data-i18n="doa_desc">
+              Jika ikan diterima dalam kondisi mati, wajib melampirkan video unboxing paket tanpa jeda/potongan saat paket baru dibuka. Kami ganti unit baru atau refund penuh sesuai harga ikan.
+            </p>
+          </div>
+        </div>
+        <a href="https://wa.me/6282178640487" target="_blank" class="shrink-0 px-6 py-3.5 rounded-xl bg-white text-black font-bold text-sm hover:bg-gold-400 transition">
+          <span data-i18n="doa_btn">Hubungi Admin</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- FOOTER & SOCIAL MEDIA -->
+  <footer id="contact" class="pt-16 pb-10 border-t border-white/10 bg-obsidian">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-10 pb-12 border-b border-white/10">
+        
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <i class="fa-solid fa-crown text-gold-400 text-xl"></i>
+            <span class="font-display font-bold text-xl text-white">BETTA <span class="text-gold-400">S4NNN</span></span>
+          </div>
+          <p class="text-zinc-400 text-sm leading-relaxed mb-4" data-i18n="footer_about">
+            Pusat penjualan ikan cupang hias & kontes kualitas terbaik (Halfmoon, Plakat, Crowntail) berbasis di Pangkal Pinang, Kepulauan Bangka Belitung.
+          </p>
+          <p class="text-xs text-zinc-500">
+            <i class="fa-solid fa-location-dot text-gold-400 mr-1.5"></i> Pangkal Pinang, Bangka Belitung, Indonesia
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white uppercase tracking-wider text-xs mb-4" data-i18n="footer_contact_title">Kontak Resmi</h4>
+          <ul class="space-y-3 text-sm text-zinc-300">
+            <li>
+              <a href="https://wa.me/6282178640487" target="_blank" class="hover:text-gold-400 flex items-center gap-2.5 transition">
+                <i class="fa-brands fa-whatsapp text-emerald-400 text-base"></i>
+                <span>+62 821-7864-0487 (WhatsApp Fast Response)</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://shopee.co.id/search?keyword=Betta_S4nnn" target="_blank" class="hover:text-gold-400 flex items-center gap-2.5 transition">
+                <i class="fa-solid fa-bag-shopping text-orange-400 text-base"></i>
+                <span>Shopee: Betta_S4nnn</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white uppercase tracking-wider text-xs mb-4" data-i18n="footer_social_title">Sosial Media & Update Stok</h4>
+          <div class="flex flex-wrap gap-3">
+            <a href="https://instagram.com/Betta_s4nnn" target="_blank" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-white/10 text-sm text-white transition">
+              <i class="fa-brands fa-instagram text-pink-500"></i>
+              <span>@Betta_s4nnn</span>
+            </a>
+            <a href="https://tiktok.com/@Betta_S4nnn" target="_blank" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-white/10 text-sm text-white transition">
+              <i class="fa-brands fa-tiktok text-cyan-400"></i>
+              <span>@Betta_S4nnn</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-500 gap-4">
+        <p>© 2026 BETTA S4NNN — Bangka Belitung. All Rights Reserved.</p>
+        <p data-i18n="footer_note">Harga dapat disesuaikan dengan ongkos kirim domestik / biaya transshipper tujuan.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/6282178640487" target="_blank" aria-label="Chat WhatsApp" class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center shadow-2xl shadow-emerald-500/30 hover:scale-105 transition">
+    <i class="fa-brands fa-whatsapp text-3xl"></i>
+  </a>
+
+  <!-- DETAIL PREVIEW MODAL -->
+  <div id="fish-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+    <div class="bg-cardbg border border-gold-500/40 rounded-3xl max-w-lg w-full p-6 sm:p-8 relative shadow-2xl">
+      <button onclick="closeModal()" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-zinc-800 hover:bg-zinc-700 text-zinc-300 flex items-center justify-center">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT DATA & INTERACTIVITY -->
+  <script>
+    let currentLocale = 'id';
+    let currentFilter = 'All';
+
+    const bettaCatalog = [
+      {
+        id: 'BS4-01',
+        name: 'Black Samurai Gold Rim',
+        category: 'Plakat',
+        grade: 'SHOW GRADE',
+        age: '4.5 Bulan / Mos',
+        gender: 'Male (Jantan)',
+        priceIDR: 350000,
+        priceUSD: 35,
+        primaryColor: '#EAB308',
+        secondaryColor: '#09090B',
+        descID: 'Mental flare galak, sisik tebal simetris dengan balutan rim emas tajam khas genetika pilihan.',
+        descEN: 'Aggressive flaring mental, thick symmetrical scales with sharp metallic gold rim.'
+      },
+      {
+        id: 'BS4-02',
+        name: 'Royal Black-Gold Halfmoon',
+        category: 'Halfmoon',
+        grade: 'TOP EXHIBITION',
+        age: '5 Bulan / Mos',
+        gender: 'Male (Jantan)',
+        priceIDR: 450000,
+        priceUSD: 45,
+        primaryColor: '#FACC15',
+        secondaryColor: '#18181B',
+        descID: 'Bukaan ekor penuh 180 derajat simetris, tulang ekor kokoh, warna hitam pekat kontras emas.',
+        descEN: 'Full 180-degree symmetrical tail spread, strong fin rays, deep jet-black body with gold contrast.'
+      },
+      {
+        id: 'BS4-03',
+        name: 'Inferno Gold Crowntail',
+        category: 'Crowntail',
+        grade: 'CONTEST LINE',
+        age: '4 Bulan / Mos',
+        gender: 'Male (Jantan)',
+        priceIDR: 300000,
+        priceUSD: 30,
+        primaryColor: '#F59E0B',
+        secondaryColor: '#09090B',
+        descID: 'Serit ekor tajam bersilang (cross-ray) rapi, bukaan lebar dan agresif saat diflare.',
+        descEN: 'Clean sharp cross-ray finnage, wide spread and highly responsive flare.'
+      },
+      {
+        id: 'BS4-04',
+        name: 'Avatar Copper Gordon',
+        category: 'Plakat',
+        grade: 'VIP BREEDER',
+        age: '4.5 Bulan / Mos',
+        gender: 'Pair (Sepasang)',
+        priceIDR: 550000,
+        priceUSD: 55,
+        primaryColor: '#38BDF8',
+        secondaryColor: '#09090B',
+        descID: 'Bintik star-galaxy merata di badan hitam pekat. Cocok untuk indukan cetak generasi avatar.',
+        descEN: 'Even star-galaxy spots across jet-black base. Ideal breeding pair for avatar line.'
+      },
+      {
+        id: 'BS4-05',
+        name: '24K Full Gold Halfmoon',
+        category: 'Halfmoon',
+        grade: 'PREMIUM GOLD',
+        age: '4.5 Bulan / Mos',
+        gender: 'Male (Jantan)',
+        priceIDR: 400000,
+        priceUSD: 40,
+        primaryColor: '#FDE047',
+        secondaryColor: '#78350F',
+        descID: 'Warna emas metalik solid dari kepala hingga ujung ekor tanpa bocor warna.',
+        descEN: 'Solid metallic 24K gold coloration from head to fin tips with clean form.'
+      },
+      {
+        id: 'BS4-06',
+        name: 'Black Orchid Crowntail',
+        category: 'Crowntail',
+        grade: 'SHOW GRADE',
+        age: '4.5 Bulan / Mos',
+        gender: 'Male (Jantan)',
+        priceIDR: 325000,
+        priceUSD: 32,
+        primaryColor: '#A855F7',
+        secondaryColor: '#09090B',
+        descID: 'Kombinasi hitam pekat dengan kilau ungu-emas elektrik pada tulang serit.',
+        descEN: 'Deep black base with electric violet-gold sheen along the crown rays.'
+      }
+    ];
+    // Translations Dictionary
+    const i18n = {
+      id: {
+        nav_catalog: 'Koleksi Ikan',
+        nav_shipping: 'Pengiriman & Pembayaran',
+        nav_guarantee: 'Garansi DOA',
+        nav_contact: 'Kontak',
+        nav_order: 'Pesan Langsung',
+        hero_badge: 'Pangkal Pinang, Bangka Belitung • Pengiriman Lokal & Ekspor',
+        hero_title_1: 'Genetika Cupang Kontes',
+        hero_title_2: 'Kelas Dunia & Eksklusif',
+        hero_desc: 'Spesialis breeder & seller ikan cupang hias kualitas premium (Halfmoon, Plakat, Crowntail) langsung dari Pangkal Pinang. Siap kirim aman ke seluruh Indonesia maupun pembeli mancanegara via Transshipper resmi.',
+        hero_cta_catalog: 'Lihat Katalog Ikan',
+        hero_cta_wa: 'Tanya Stok & Video',
+        stat_1: 'Garansi Ikan Hidup (DOA)',
+        stat_2: 'Negara Transshipper',
+        stat_3: 'Kualitas Form & Warna',
+        featured_label: 'Koleksi Unggulan Minggu Ini',
+        cat_sub: 'Stok Tersedia',
+        cat_title: 'Katalog Ikan Cupang Pilihan',
+        ship_sub: 'Layanan Pengiriman & Transaksi',
+        ship_title: 'Melayani Pembeli Indonesia & Luar Negeri',
+        ship_desc: 'Sistem pengemasan beroksigen murni standar ekspor dengan opsi kurir domestik tercepat maupun jaringan transshipper internasional.',
+        dom_title: 'Pengiriman Domestik (Indonesia)',
+        dom_courier_label: 'Ekspedisi Resmi',
+        dom_pay_label: 'Metode Pembayaran Lokal',
+        int_title: 'Pengiriman Internasional (Worldwide)',
+        int_sub: 'USA • Eropa • Singapura • Malaysia • Thailand • Taiwan',
+        int_ship_label: 'Ekspor & Transshipper',
+        int_ship_desc: 'Pengiriman ke luar negeri menggunakan jalur Official Transshipper terdaftar lengkap dengan dokumen karantina & kesehatan ikan.',
+        int_pay_label: 'Pembayaran Mancanegara',
+        doa_title: '100% Garansi Ikan Hidup (Dead On Arrival Protection)',
+        doa_desc: 'Jika ikan diterima dalam kondisi mati, wajib melampirkan video unboxing paket tanpa jeda/potongan saat paket baru dibuka. Kami ganti unit baru atau refund penuh sesuai harga ikan.',
+        doa_btn: 'Hubungi Admin',
+        footer_about: 'Pusat penjualan ikan cupang hias & kontes kualitas terbaik (Halfmoon, Plakat, Crowntail) berbasis di Pangkal Pinang, Kepulauan Bangka Belitung.',
+        footer_contact_title: 'Kontak Resmi',
+        footer_social_title: 'Sosial Media & Update Stok',
+        footer_note: 'Harga belum termasuk ongkos kirim domestik / biaya transshipper luar negeri.',
+        btn_detail: 'Detail',
+        btn_buy: 'Beli via WA'
+      },
+      en: {
+        nav_catalog: 'Collection',
+        nav_shipping: 'Shipping & Payment',
+        nav_guarantee: 'DOA Guarantee',
+        nav_contact: 'Contact',
+        nav_order: 'Order Now',
+        hero_badge: 'Pangkal Pinang, Indonesia • Domestic & Worldwide Export',
+        hero_title_1: 'Show-Grade Betta Genetics',
+        hero_title_2: 'Exclusive & World-Class',
+        hero_desc: 'Premium ornamental & contest Betta breeder and seller (Halfmoon, Plakat, Crowntail) based in Bangka Belitung, Indonesia. Safe nationwide delivery and worldwide export via registered Transshippers.',
+        hero_cta_catalog: 'Explore Collection',
+        hero_cta_wa: 'Request Live Video',
+        stat_1: 'Live Arrival Guarantee',
+        stat_2: 'Transshipper Countries',
+        stat_3: 'Show Form & Color',
+        featured_label: 'Featured Line This Week',
+        cat_sub: 'Available Stock',
+        cat_title: 'Curated Betta Fish Catalog',
+        ship_sub: 'Logistics & Payment Methods',
+        ship_title: 'Serving Indonesian & International Collectors',
+        ship_desc: 'Export-standard pure oxygen double-bagging with fast domestic couriers and trusted international transshipper networks.',
+        dom_title: 'Domestic Shipping (Indonesia)',
+        dom_courier_label: 'Domestic Couriers',
+        dom_pay_label: 'Local Payment Methods',
+        int_title: 'International Shipping (Worldwide)',
+        int_sub: 'USA • Europe • Singapore • Malaysia • Thailand • Taiwan',
+        int_ship_label: 'Export & Transshipper',
+        int_ship_desc: 'Worldwide delivery handled via registered Official Transshippers with complete quarantine & health documentation.',
+        int_pay_label: 'Global Payment Gateways',
+        doa_title: '100% Live Arrival (Dead On Arrival Guarantee)',
+        doa_desc: 'In the rare event of DOA, simply provide an unedited unboxing video upon arrival. We provide a replacement fish or full refund of the fish value.',
+        doa_btn: 'Contact Admin',
+        footer_about: 'Premier ornamental & show-grade Betta fish specialist (Halfmoon, Plakat, Crowntail) based in Pangkal Pinang, Bangka Belitung Islands, Indonesia.',
+        footer_contact_title: 'Official Contact',
+        footer_social_title: 'Social Media & Daily Updates',
+        footer_note: 'Prices exclude domestic courier fees or international transshipper charges.',
+        btn_detail: 'Specs',
+        btn_buy: 'Order on WA'
+      }
+    };
+
+    function formatPrice(fish) {
+      if (currentLocale === 'id') {
+        return 'Rp ' + fish.priceIDR.toLocaleString('id-ID');
+      } else {
+        return '$' + fish.priceUSD + ' USD';
+      }
+    }
+
+    function generateFishGraphic(fish) {
+      let tailPath = '';
+      if (fish.category === 'Halfmoon') {
+        tailPath = `<path d="M135,110 C85,30 30,45 42,110 C30,175 85,190 135,110 Z" fill="${fish.primaryColor}" opacity="0.9"/>`;
+      } else if (fish.category === 'Plakat') {
+        tailPath = `<path d="M138,110 C105,65 72,72 78,110 C72,148 105,155 138,110 Z" fill="${fish.primaryColor}" opacity="0.9"/>`;
+      } else {
+        tailPath = `<path d="M135,110 L52,55 L78,92 L42,110 L78,128 L52,165 Z" fill="${fish.primaryColor}" opacity="0.92"/>`;
+      }
+
+      return `
+        <svg viewBox="0 0 320 200" class="w-52 h-40 mx-auto group-hover:scale-105 transition-transform duration-500">
+          ${tailPath}
+          <path d="M148,88 C140,48 182,42 205,84 Z" fill="${fish.primaryColor}"/>
+          <path d="M142,130 C134,170 185,174 210,132 Z" fill="${fish.primaryColor}"/>
+          <path d="M128,110 C152,80 215,78 258,108 C218,140 152,138 128,110 Z" fill="${fish.secondaryColor}" stroke="${fish.primaryColor}" stroke-width="1.8"/>
+          <circle cx="240" cy="104" r="4" fill="#FFF"/>
+          <circle cx="241" cy="104" r="2" fill="#000"/>
+        </svg>
+      `;
+    }
+
+    function renderCatalog() {
+      const grid = document.getElementById('fish-grid');
+      const filtered = currentFilter === 'All' 
+        ? bettaCatalog 
+        : bettaCatalog.filter(f => f.category === currentFilter);
+
+      grid.innerHTML = filtered.map(fish => {
+        const waText = currentLocale === 'id'
+          ? `Halo Betta S4nnn, saya tertarik dengan *${fish.name}* (${fish.id}) seharga ${formatPrice(fish)}. Apakah masih ready?`
+          : `Hi Betta S4nnn, I'm interested in *${fish.name}* (${fish.id}) listed at ${formatPrice(fish)}. Is it still available for international shipping?`;
+
+        return `
+          <div class="group rounded-3xl bg-cardbg border border-white/10 overflow-hidden gold-glow-hover transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div class="relative h-56 bg-gradient-to-b from-zinc-900 to-black p-4 flex items-center justify-center border-b border-white/5 overflow-hidden">
+                <div class="absolute top-3.5 left-3.5 flex items-center gap-2">
+                  <span class="px-2.5 py-1 rounded-md bg-gold-500/20 border border-gold-500/40 text-gold-300 text-[10px] font-bold tracking-wider">
+                    ${fish.grade}
+                  </span>
+                </div>
+                <span class="absolute top-3.5 right-3.5 text-xs font-mono text-zinc-400 bg-black/60 px-2.5 py-1 rounded-md">
+                  ${fish.id}
+                </span>
+
+                ${generateFishGraphic(fish)}
+
+                <span class="absolute bottom-3 left-3.5 text-[11px] font-semibold uppercase tracking-wider text-zinc-400">
+                  ${fish.category} • ${fish.gender}
+                </span>
+              </div>
+
+              <div class="p-6">
+                <div class="flex items-start justify-between gap-2 mb-2">
+                  <h3 class="text-lg font-bold text-white group-hover:text-gold-400 transition">${fish.name}</h3>
+                </div>
+                <p class="text-xs text-zinc-400 leading-relaxed mb-4">
+                  ${currentLocale === 'id' ? fish.descID : fish.descEN}
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-2">
+              <div class="flex items-center justify-between pt-4 border-t border-white/10">
+                <div>
+                  <span class="text-[11px] text-zinc-500 block">Price</span>
+                  <span class="text-lg font-extrabold text-gold-400">${formatPrice(fish)}</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <button onclick="openModal('${fish.id}')" class="px-3.5 py-2.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 border border-white/10 text-xs font-semibold text-zinc-200 transition">
+                    ${i18n[currentLocale].btn_detail}
+                  </button>
+                  <a href="https://wa.me/6282178640487?text=${encodeURIComponent(waText)}" target="_blank" class="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-black text-xs font-bold transition">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span>${i18n[currentLocale].btn_buy}</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function setLocale(lang) {
+      currentLocale = lang;
+      
+      const btnId = document.getElementById('btn-id');
+      const btnEn = document.getElementById('btn-en');
+      if (lang === 'id') {
+        btnId.className = 'px-3 py-1.5 rounded-full bg-gold-500 text-black transition';
+        btnEn.className = 'px-3 py-1.5 rounded-full text-zinc-400 hover:text-white transition';
+      } else {
+        btnEn.className = 'px-3 py-1.5 rounded-full bg-gold-500 text-black transition';
+        btnId.className = 'px-3 py-1.5 rounded-full text-zinc-400 hover:text-white transition';
+      }
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (i18n[lang][key]) {
+          el.innerHTML = i18n[lang][key];
+        }
+      });
+
+      renderCatalog();
+    }
+
+    function filterFish(category) {
+      currentFilter = category;
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        if (btn.textContent.trim() === category) {
+          btn.className = 'filter-btn active px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-gold-500 text-black transition';
+        } else {
+          btn.className = 'filter-btn px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider bg-zinc-900 text-zinc-300 border border-white/10 hover:border-gold-500/50 transition';
+        }
+      });
+      renderCatalog();
+    }
+
+    function openModal(fishId) {
+      const fish = bettaCatalog.find(f => f.id === fishId);
+      if (!fish) return;
+
+      const waText = currentLocale === 'id'
+        ? `Halo Betta S4nnn, saya mau order *${fish.name}* (${fish.id}) - ${formatPrice(fish)}.`
+        : `Hello Betta S4nnn, I would like to order *${fish.name}* (${fish.id}) - ${formatPrice(fish)}.`;
+
+      document.getElementById('modal-content').innerHTML = `
+        <span class="px-3 py-1 rounded-full bg-gold-500/20 text-gold-300 text-xs font-bold">${fish.grade} • ${fish.id}</span>
+        <h3 class="font-display text-2xl font-bold text-white mt-3">${fish.name}</h3>
+        <div class="my-4 p-4 rounded-2xl bg-black/60 border border-white/10">
+          ${generateFishGraphic(fish)}
+        </div>
+        <div class="grid grid-cols-2 gap-3 text-xs mb-4">
+          <div class="p-3 rounded-xl bg-zinc-900 border border-white/5">
+            <span class="text-zinc-500 block">Variety</span>
+            <strong class="text-white">${fish.category}</strong>
+          </div>
+          <div class="p-3 rounded-xl bg-zinc-900 border border-white/5">
+            <span class="text-zinc-500 block">Age & Sex</span>
+            <strong class="text-white">${fish.age} (${fish.gender})</strong>
+          </div>
+        </div>
+        <p class="text-sm text-zinc-300 leading-relaxed mb-6">
+          ${currentLocale === 'id' ? fish.descID : fish.descEN}
+        </p>
+        <div class="flex items-center justify-between pt-4 border-t border-white/10">
+          <div>
+            <span class="text-xs text-zinc-400 block">Price</span>
+            <span class="text-2xl font-extrabold text-gold-400">${formatPrice(fish)}</span>
+          </div>
+          <a href="https://wa.me/6282178640487?text=${encodeURIComponent(waText)}" target="_blank" class="inline-flex items-center gap-2 bg-gold-500 hover:bg-gold-400 text-black font-bold px-6 py-3 rounded-xl transition">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>${i18n[currentLocale].btn_buy}</span>
+          </a>
+        </div>
+      `;
+
+      const modal = document.getElementById('fish-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('fish-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    renderCatalog();
+  </script>
+</body>
+</html>
